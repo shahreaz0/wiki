@@ -8,18 +8,18 @@ type Props = {
   }
 }
 
+// new comment
+
 export async function generateMetadata(props: Props): Promise<Metadata> {
   const searchResults = await getWikiResults(props.params.query)
+
+  console.log("hello")
 
   if (!searchResults?.query?.pages)
     return {
       title: "Not Found",
       description: "Not found",
     }
-
-  //
-
-  //
 
   return {
     title: decodeURIComponent(props.params.query),
