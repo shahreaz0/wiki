@@ -1,12 +1,13 @@
-import { type Page } from "@/types/search-results";
-import Image from "next/image";
+import { type Page } from "@/types/search-results"
+import Image from "next/image"
 
 type Props = {
-  details: Page;
-};
+  details: Page
+}
 
 export default function Item(props: Props) {
-  const src = "https://api.dicebear.com/6.x/icons/svg?seed=Pepper&icon=emojiSmile";
+  const src =
+    "https://api.dicebear.com/6.x/icons/svg?seed=Pepper&icon=emojiSmile"
   return (
     <section className="flex mb-4">
       <section className="flex justify-center items-center  min-w-fit mr-2">
@@ -37,5 +38,5 @@ export default function Item(props: Props) {
         <p className="text-slate-600">{props.details.extract}</p>
       </section>
     </section>
-  );
+  )
 }

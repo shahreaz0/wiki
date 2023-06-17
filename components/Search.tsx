@@ -1,16 +1,16 @@
-"use client";
-import { FormEvent, useState } from "react";
+"use client"
+import { FormEvent, useState } from "react"
 
-import { useRouter } from "next/navigation";
+import { useRouter } from "next/navigation"
 
 export default function Search() {
-  const [q, setQ] = useState("");
+  const [q, setQ] = useState("")
 
-  const router = useRouter();
+  const router = useRouter()
 
   function onQuerySubmit(event: FormEvent<HTMLFormElement>) {
-    event.preventDefault();
-    router.push(`/${q}`);
+    event.preventDefault()
+    router.push(`/${q}`)
   }
 
   return (
@@ -22,9 +22,12 @@ export default function Search() {
         placeholder="Search..."
         onChange={(event) => setQ(event.target.value)}
       />
-      <button type="submit" className="h-8 border px-2 rounded-sm hover:bg-slate-700">
+      <button
+        type="submit"
+        className="h-8 border px-2 rounded-sm hover:bg-slate-700"
+      >
         Enter
       </button>
     </form>
-  );
+  )
 }

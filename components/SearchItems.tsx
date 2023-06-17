@@ -1,15 +1,15 @@
-import { type QueryResult } from "@/types/search-results";
+import { type QueryResult } from "@/types/search-results"
 
-import Item from "@/components/Item";
+import Item from "@/components/Item"
 
 type Props = {
-  results: Promise<QueryResult>;
-};
+  results: Promise<QueryResult>
+}
 
 export default async function SearchItems(props: Props) {
-  const results = await props.results;
+  const results = await props.results
 
-  const searchResults = results?.query?.pages;
+  const searchResults = results?.query?.pages
 
   return (
     <section>
@@ -25,5 +25,5 @@ export default async function SearchItems(props: Props) {
         </section>
       )}
     </section>
-  );
+  )
 }

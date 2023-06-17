@@ -1,4 +1,4 @@
-import Search from "./Search";
+import Search from "./Search"
 
 export default function Menu() {
   return (
@@ -6,5 +6,5 @@ export default function Menu() {
       <h3 className="font-medium text-lg">Wiki</h3>
       <Search />
     </nav>
-  );
+  )
 }

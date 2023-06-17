@@ -1,4 +1,4 @@
-import { type QueryResult } from "@/types/search-results";
+import { type QueryResult } from "@/types/search-results"
 
 export default async function getWikiResults(query: string) {
   const searchParams = new URLSearchParams({
@@ -13,11 +13,13 @@ export default async function getWikiResults(query: string) {
     exlimit: "max",
     format: "json",
     origin: "*",
-  });
+  })
 
-  const response = await fetch("https://en.wikipedia.org/w/api.php?" + searchParams);
+  const response = await fetch(
+    "https://en.wikipedia.org/w/api.php?" + searchParams
+  )
 
-  const data: Promise<QueryResult> = response.json();
+  const data: Promise<QueryResult> = response.json()
 
-  return data;
+  return data
 }
