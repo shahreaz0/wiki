@@ -17,6 +17,8 @@ export async function generateMetadata(props: Props): Promise<Metadata> {
       description: "Not found",
     }
 
+  //
+
   return {
     title: decodeURIComponent(props.params.query),
     description: decodeURIComponent(props.params.query),
